@@ -1,0 +1,196 @@
+/* Harris Ijen Admin Company Portal Stylesheet */
+/* PT HARRIS IJEN JAYA MANDIRI */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --primary-navy: #0B2545;
+  --primary-blue: #13315C;
+  --accent-gold: #C59B27;
+  --accent-gold-light: #F7E9B7;
+  --accent-gold-hover: #AA821C;
+  --sidebar-bg: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --body-bg: #F8FAFC;
+  --border-color: #E2E8F0;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Embedded Blogspot Post Mode */
+body.is-embedded-portal {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* UI Cards */
+.ui-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.ui-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+}
+
+.stat-pill-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+/* Rating Bar */
+.rating-progress-bg {
+  background-color: #E2E8F0;
+  height: 6px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.rating-progress-fill {
+  background-color: #2563EB;
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navigation Links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: #64748B;
+  font-weight: 500;
+  font-size: 0.925rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+
+.nav-link:hover {
+  color: var(--primary-navy);
+  background-color: #F1F5F9;
+}
+
+.nav-link.active {
+  background-color: #EFF6FF;
+  color: #2563EB;
+  font-weight: 600;
+}
+
+.nav-link.active i {
+  color: #2563EB;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.badge-paid {
+  background-color: #ECFDF5;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+}
+
+.badge-pending {
+  background-color: #FFFBEB;
+  color: #D97706;
+  border: 1px solid #FDE68A;
+}
+
+.badge-partial {
+  background-color: #EFF6FF;
+  color: #2563EB;
+  border: 1px solid #BFDBFE;
+}
+
+.badge-refunded {
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.badge-refund-requested {
+  background-color: #FFF1F2;
+  color: #E11D48;
+  border: 1px solid #FDA4AF;
+}
+
+/* Lightbox Modal & Canvas */
+#modalFileLightbox {
+  backdrop-filter: blur(8px);
+}
+
+#lightboxImageContainer {
+  overflow: hidden;
+  touch-action: pinch-zoom;
+}
+
+/* Defensive CSS isolation for Blogspot embedding */
+#harris-portal-app {
+  text-align: left;
+  line-height: 1.5;
+}
+
+#harris-portal-app button,
+#harris-portal-app input,
+#harris-portal-app select,
+#harris-portal-app textarea {
+  -webkit-appearance: auto !important;
+  -moz-appearance: auto !important;
+  appearance: auto !important;
+  box-sizing: border-box !important;
+}
+
+#harris-portal-app table {
+  display: table !important;
+  width: 100% !important;
+}
+
+@media print {
+  aside, header, #toastContainer, .no-print {
+    display: none !important;
+  }
+}

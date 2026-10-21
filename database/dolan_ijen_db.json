@@ -1,0 +1,487 @@
+{
+  "guests": [
+    {
+      "id": "GST-1001",
+      "guestName": "Adunni Lawson",
+      "country": "United Kingdom",
+      "phone": "+44 7911 123456",
+      "email": "adunni.lawson@example.com",
+      "passportNumber": "UK98452109",
+      "gender": "Female",
+      "numberOfPeople": 2,
+      "passengers": [
+        {
+          "name": "Adunni Lawson",
+          "gender": "Female",
+          "passportNumber": "UK98452109"
+        },
+        {
+          "name": "Tariq Lawson",
+          "gender": "Male",
+          "passportNumber": "UK98452110"
+        }
+      ],
+      "invoiceNumber": "INV/HIJ/2026/09/001",
+      "tourPackageName": "Ijen Blue Fire Midnight Tour & Sunrise",
+      "paymentAmount": 2500000,
+      "paymentMethod": "Credit Card",
+      "paymentStatus": "Paid in Full",
+      "paymentLocation": "Banyuwangi HQ Office",
+      "arrivalTime": "2026-09-12T14:30",
+      "pickupTime": "00:15 AM",
+      "pickupLocation": "Hotel Santika Banyuwangi Lobby",
+      "finalDropOffLocation": "Ketapang Ferry Port (Crossing to Bali)",
+      "specialNotes": "Vegetarian breakfast requested, 2 gas masks size M, warm jackets provided",
+      "createdAt": "2026-09-08T10:20:00Z",
+      "recordedBy": "ABDUL KHOLIK (HIC1620832016)"
+    },
+    {
+      "id": "GST-1002",
+      "guestName": "Johnson Daniel",
+      "country": "Australia",
+      "phone": "+61 412 345 678",
+      "email": "johnson.daniel@example.com",
+      "passportNumber": "PA7731294",
+      "gender": "Male",
+      "numberOfPeople": 2,
+      "passengers": [
+        {
+          "name": "Johnson Daniel",
+          "gender": "Male",
+          "passportNumber": "PA7731294"
+        },
+        {
+          "name": "Clara Daniel",
+          "gender": "Female",
+          "passportNumber": "PA7731295"
+        }
+      ],
+      "invoiceNumber": "INV/HIJ/2026/09/002",
+      "tourPackageName": "Mount Bromo & Ijen Crater Overland 3D2N",
+      "paymentAmount": 6800000,
+      "paymentMethod": "Wise Transfer",
+      "paymentStatus": "Paid in Full",
+      "paymentLocation": "Online Payment Gateway",
+      "arrivalTime": "2026-09-08T11:00",
+      "pickupTime": "09:00 AM",
+      "pickupLocation": "Banyuwangi Airport (BWX) Arrival Gate",
+      "finalDropOffLocation": "Denpasar / Seminyak Hotel, Bali",
+      "specialNotes": "Private 4x4 Jeep, warm jackets provided for 2 guests",
+      "createdAt": "2026-09-02T15:45:00Z",
+      "recordedBy": "ANDIKA EKA PUTRA (HIC1620852024)"
+    },
+    {
+      "id": "GST-1003",
+      "guestName": "Deji Olatunji",
+      "country": "Nigeria",
+      "phone": "+234 803 123 4567",
+      "email": "deji.olatunji@example.com",
+      "passportNumber": "A19384722",
+      "gender": "Male",
+      "numberOfPeople": 1,
+      "passengers": [
+        {
+          "name": "Deji Olatunji",
+          "gender": "Male",
+          "passportNumber": "A19384722"
+        }
+      ],
+      "invoiceNumber": "INV/HIJ/2026/09/003",
+      "tourPackageName": "Baluran African Van Java Safari & Ijen Tour",
+      "paymentAmount": 3900000,
+      "paymentMethod": "Bank Transfer (BCA)",
+      "paymentStatus": "Paid in Full",
+      "paymentLocation": "Banyuwangi HQ Office",
+      "arrivalTime": "2026-09-05T16:00",
+      "pickupTime": "06:00 AM",
+      "pickupLocation": "Ketapang Ferry Harbor Terminal 2",
+      "finalDropOffLocation": "Banyuwangi Airport (BWX)",
+      "specialNotes": "Needs drone flight photography documentation assistance",
+      "createdAt": "2026-09-01T09:12:00Z",
+      "recordedBy": "ABDUL KHOLIK (HIC1620832016)"
+    },
+    {
+      "id": "GST-1004",
+      "guestName": "Sophie Moreau",
+      "country": "France",
+      "phone": "+33 6 12 34 56 78",
+      "email": "sophie.moreau@example.fr",
+      "passportNumber": "FR55210984",
+      "gender": "Female",
+      "numberOfPeople": 2,
+      "passengers": [
+        {
+          "name": "Sophie Moreau",
+          "gender": "Female",
+          "passportNumber": "FR55210984"
+        },
+        {
+          "name": "Julien Blanc",
+          "gender": "Male",
+          "passportNumber": "FR55210985"
+        }
+      ],
+      "invoiceNumber": "INV/HIJ/2026/10/004",
+      "tourPackageName": "Ijen Blue Fire Midnight Tour & Sunrise",
+      "paymentAmount": 2125000,
+      "originalAmount": 2500000,
+      "paymentMethod": "Bank Transfer (BCA)",
+      "paymentStatus": "Paid in Full",
+      "paymentLocation": "Banyuwangi HQ Office",
+      "arrivalTime": "2026-10-18T19:00",
+      "pickupTime": "00:30 AM",
+      "pickupLocation": "Dialoog Banyuwangi Hotel",
+      "finalDropOffLocation": "Dialoog Banyuwangi Hotel",
+      "specialNotes": "Discount approved (15% Early Bird). Proof of payment verified.",
+      "discountAmount": 375000,
+      "discountStatus": "Approved",
+      "paymentRefNumber": "TRX-BCA-982144791",
+      "createdAt": "2026-10-10T14:20:00Z",
+      "recordedBy": "SAMSUL MUARIF (HIC1907672015)"
+    },
+    {
+      "id": "GST-1005",
+      "guestName": "Klaus Schmidt",
+      "country": "Germany",
+      "phone": "+49 151 23456789",
+      "email": "klaus.schmidt@example.de",
+      "passportNumber": "C19283746",
+      "gender": "Male",
+      "numberOfPeople": 1,
+      "passengers": [
+        {
+          "name": "Klaus Schmidt",
+          "gender": "Male",
+          "passportNumber": "C19283746"
+        }
+      ],
+      "invoiceNumber": "INV/HIJ/2026/10/005",
+      "tourPackageName": "Banyuwangi Heritage, Jagir Waterfall & Ijen",
+      "paymentAmount": 3200000,
+      "paymentMethod": "Credit Card",
+      "paymentStatus": "Refund Requested",
+      "paymentLocation": "Online Payment Gateway",
+      "arrivalTime": "2026-10-16T12:00",
+      "pickupTime": "01:00 AM",
+      "pickupLocation": "Kokoon Hotel Banyuwangi",
+      "finalDropOffLocation": "Stasiun Kereta Api Banyuwangi Kota",
+      "specialNotes": "Guest had sudden domestic flight cancellation at CGK Jakarta",
+      "createdAt": "2026-10-08T11:00:00Z",
+      "recordedBy": "ABDUL KHOLIK (HIC1620832016)"
+    },
+    {
+      "id": "GST-1006",
+      "guestName": "Arief Wicaksono",
+      "country": "Indonesia",
+      "phone": "+62 812 3456 7890",
+      "email": "arief.wicaksono@example.com",
+      "passportNumber": "W8849201",
+      "gender": "Male",
+      "numberOfPeople": 3,
+      "passengers": [
+        {
+          "name": "Arief Wicaksono",
+          "gender": "Male",
+          "passportNumber": "W8849201"
+        },
+        {
+          "name": "Siti Rahmawati",
+          "gender": "Female",
+          "passportNumber": "W8849202"
+        },
+        {
+          "name": "Rizky Wicaksono",
+          "gender": "Male",
+          "passportNumber": "W8849203"
+        }
+      ],
+      "invoiceNumber": "INV/HIJ/2026/10/006",
+      "tourPackageName": "Ijen Blue Fire Family VIP Package",
+      "paymentAmount": 4500000,
+      "paymentMethod": "Bank Transfer (Mandiri)",
+      "paymentStatus": "Paid in Full",
+      "paymentLocation": "Banyuwangi HQ Office",
+      "arrivalTime": "2026-10-20T17:30",
+      "pickupTime": "00:00 AM",
+      "pickupLocation": "Stasiun Kereta Api Banyuwangi Kota",
+      "finalDropOffLocation": "Hotel Santika Banyuwangi",
+      "specialNotes": "Troli / gerobak dorong Ijen (sulky taxi) booked for elderly parent",
+      "createdAt": "2026-10-14T08:30:00Z",
+      "recordedBy": "ANDIKA EKA PUTRA (HIC1620852024)"
+    }
+  ],
+  "discounts": [
+    {
+      "id": "DSC-2026-001",
+      "guestId": "GST-1004",
+      "invoiceNumber": "INV/HIJ/2026/10/004",
+      "guestName": "Sophie Moreau",
+      "originalAmount": 2500000,
+      "discountType": "percentage",
+      "discountValue": 15,
+      "discountAmount": 375000,
+      "finalAmount": 2125000,
+      "paymentRefNumber": "TRX-BCA-982144791",
+      "reason": "Early bird promotion & 2 pax couple booking discount authorized for European market.",
+      "requestedBy": "SAMSUL MUARIF (HIC1907672015)",
+      "requestedAt": "2026-10-10T15:00:00Z",
+      "status": "Approved",
+      "approvedBy": "MUHAMAD ABDUL HARIS, S.H., LL.M (HIC2502982017)",
+      "approvedAt": "2026-10-10T16:30:00Z",
+      "managerNotes": "Approved 15% promotional rate."
+    },
+    {
+      "id": "DSC-2026-002",
+      "guestId": "GST-1006",
+      "invoiceNumber": "INV/HIJ/2026/10/006",
+      "guestName": "Arief Wicaksono",
+      "originalAmount": 4500000,
+      "discountType": "fixed",
+      "discountValue": 300000,
+      "discountAmount": 300000,
+      "finalAmount": 4200000,
+      "paymentRefNumber": "MANDIRI-FT-7782103",
+      "reason": "Loyal customer return booking + 3 pax family group bundle.",
+      "requestedBy": "ANDIKA EKA PUTRA (HIC1620852024)",
+      "requestedAt": "2026-10-14T09:00:00Z",
+      "status": "Pending Approval",
+      "approvedBy": null,
+      "approvedAt": null,
+      "managerNotes": "Awaiting Director review."
+    }
+  ],
+  "cancellations": [
+    {
+      "id": "CAN-2026-001",
+      "guestId": "GST-1005",
+      "invoiceNumber": "INV/HIJ/2026/10/005",
+      "guestName": "Klaus Schmidt",
+      "reason": "Sudden domestic flight cancellation from Jakarta to Banyuwangi due to weather disruption; unable to reach Banyuwangi on schedule.",
+      "refundPercentage": 80,
+      "refundAmount": 2560000,
+      "originalAmount": 3200000,
+      "status": "Pending Approval",
+      "requestedAt": "2026-10-15T10:15:00Z",
+      "requestedBy": "ABDUL KHOLIK (HIC1620832016)",
+      "approvedAt": null,
+      "approvedBy": null,
+      "managerNotes": "Pending leadership sign-off on 80% refund policy."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-001",
+      "invoiceNumber": "INV/HIJ/2026/09/001",
+      "guestName": "Adunni Lawson",
+      "country": "United Kingdom",
+      "location": "Ikeja / Banyuwangi",
+      "date": "September 12, 2025",
+      "rating": 5,
+      "tag": "Ijen Blue Fire Midnight Tour",
+      "reviewText": "Oliver, Harris and the team did an outstanding job! He arrived on time, was very professional, and completed the trek exactly as requested. The gas masks were clean and high quality, safety briefings were crystal clear, and the blue flame spectacle in the crater was breathtaking. Highly recommend Harris Ijen Tour to international travelers!",
+      "categories": {
+        "professionalism": 5,
+        "qualityOfWork": 5,
+        "timeliness": 5,
+        "communication": 5
+      },
+      "helpfulCount": 12,
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces",
+      "response": {
+        "date": "September 13, 2025",
+        "author": "PT HARRIS IJEN JAYA MANDIRI Management",
+        "text": "Dear Adunni, thank you sincerely for your glowing feedback! We are thrilled you enjoyed the Midnight Blue Fire trek and our team hospitality. Hope to welcome you back to East Java again!"
+      }
+    },
+    {
+      "id": "REV-002",
+      "invoiceNumber": "INV/HIJ/2026/09/002",
+      "guestName": "Johnson Daniel",
+      "country": "Australia",
+      "location": "Ajah / Bromo-Ijen",
+      "date": "September 8, 2025",
+      "rating": 5,
+      "tag": "Mount Bromo & Ijen Crater Overland",
+      "reviewText": "Quick and efficient service. Emeka and Harris coordinated all 4 itinerary legs smoothly and explained everything clearly. Fair pricing and excellent workmanship on logistics. Will definitely use their services again for Bali and Java tours.",
+      "categories": {
+        "professionalism": 5,
+        "qualityOfWork": 5,
+        "timeliness": 5,
+        "communication": 5
+      },
+      "helpfulCount": 9,
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces",
+      "response": {
+        "date": "September 9, 2025",
+        "author": "PT HARRIS IJEN JAYA MANDIRI Operations",
+        "text": "Thank you Daniel! It was our pleasure coordinating your 3D2N Bromo & Ijen journey. Have a safe flight back home!"
+      }
+    },
+    {
+      "id": "REV-003",
+      "invoiceNumber": "INV/HIJ/2026/09/003",
+      "guestName": "Deji Olatunji",
+      "country": "Nigeria",
+      "location": "Surulere / Baluran",
+      "date": "September 5, 2025",
+      "rating": 4.8,
+      "tag": "Baluran Safari & Ijen Tour",
+      "reviewText": "Good work overall. The savanna safari tour was great and the animals were visible. Emeka was polite and professional. Only minor delay in arrival due to ferry traffic, but he called to inform me. Would recommend.",
+      "categories": {
+        "professionalism": 5,
+        "qualityOfWork": 5,
+        "timeliness": 4.5,
+        "communication": 5
+      },
+      "helpfulCount": 7,
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces",
+      "response": {
+        "date": "September 6, 2025",
+        "author": "PT HARRIS IJEN JAYA MANDIRI Management",
+        "text": "Thanks Deji for the honest feedback! We take timeliness very seriously and ferry crossing congestion is something we continuously optimize with advance ticketing. Safe travels!"
+      }
+    }
+  ],
+  "financials": [
+    {
+      "id": "FIN-101",
+      "type": "Income",
+      "category": "Tour Booking",
+      "invoiceNumber": "INV/HIJ/2026/09/001",
+      "guestName": "Adunni Lawson",
+      "amount": 2500000,
+      "date": "2026-09-08",
+      "paymentMethod": "Credit Card",
+      "status": "Received",
+      "description": "Payment for Ijen Blue Fire Midnight Tour (2 Pax)"
+    },
+    {
+      "id": "FIN-102",
+      "type": "Income",
+      "category": "Tour Booking",
+      "invoiceNumber": "INV/HIJ/2026/09/002",
+      "guestName": "Johnson Daniel",
+      "amount": 6800000,
+      "date": "2026-09-02",
+      "paymentMethod": "Wise Transfer",
+      "status": "Received",
+      "description": "Payment for Bromo & Ijen 3D2N (2 Pax)"
+    },
+    {
+      "id": "FIN-103",
+      "type": "Income",
+      "category": "Tour Booking",
+      "invoiceNumber": "INV/HIJ/2026/09/003",
+      "guestName": "Deji Olatunji",
+      "amount": 3900000,
+      "date": "2026-09-01",
+      "paymentMethod": "Bank Transfer (BCA)",
+      "status": "Received",
+      "description": "Payment for Baluran & Ijen Safari (1 Pax)"
+    },
+    {
+      "id": "FIN-104",
+      "type": "Income",
+      "category": "Tour Booking",
+      "invoiceNumber": "INV/HIJ/2026/10/004",
+      "guestName": "Sophie Moreau",
+      "amount": 2125000,
+      "date": "2026-10-10",
+      "paymentMethod": "Bank Transfer (BCA)",
+      "status": "Received (Discounted)",
+      "description": "Payment for Ijen Blue Fire (2 Pax, 15% Early Bird Promo)"
+    },
+    {
+      "id": "FIN-105",
+      "type": "Income",
+      "category": "Tour Booking",
+      "invoiceNumber": "INV/HIJ/2026/10/006",
+      "guestName": "Arief Wicaksono",
+      "amount": 4500000,
+      "date": "2026-10-14",
+      "paymentMethod": "Bank Transfer (Mandiri)",
+      "status": "Received",
+      "description": "Payment for Ijen VIP Family Package (3 Pax)"
+    },
+    {
+      "id": "FIN-EXP-01",
+      "type": "Expense",
+      "category": "Park Entrance & Ranger Tickets",
+      "invoiceNumber": "EXP/BKSDA/26/01",
+      "guestName": "BKSDA Ijen & Baluran",
+      "amount": 2850000,
+      "date": "2026-09-10",
+      "paymentMethod": "Online Payment",
+      "status": "Completed",
+      "description": "Simaksi Natural Reserve Entrance Tickets & Local Ranger fees"
+    },
+    {
+      "id": "FIN-EXP-02",
+      "type": "Expense",
+      "category": "Transport & Fuel",
+      "invoiceNumber": "EXP/TRAN/26/02",
+      "guestName": "Pertamina & 4x4 Troop",
+      "amount": 1750000,
+      "date": "2026-09-11",
+      "paymentMethod": "Cash",
+      "status": "Completed",
+      "description": "Jeep 4WD fuel and shuttle rental across Paltuding"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "AUD-901",
+      "timestamp": "2026-10-21 21:45:21",
+      "username": "haris_director",
+      "fullName": "MUHAMAD ABDUL HARIS, S.H., LL.M",
+      "role": "BUSINESS OWNER (HIC2502982017)",
+      "action": "Portal Login Successful",
+      "ipAddress": "180.252.164.21",
+      "userAgent": "Chrome 130.0 Win11",
+      "status": "Success"
+    },
+    {
+      "id": "AUD-902",
+      "timestamp": "2026-10-21 20:10:05",
+      "username": "ida_marketing",
+      "fullName": "IDA AYU PUTRI SARASWATI, S.H., LL.M",
+      "role": "MARKETING MANAGER (HIC2104682023)",
+      "action": "Reviewed Discount Request DSC-2026-002",
+      "ipAddress": "180.252.164.21",
+      "userAgent": "Chrome 130.0 Win11",
+      "status": "Success"
+    },
+    {
+      "id": "AUD-903",
+      "timestamp": "2026-10-21 19:30:12",
+      "username": "abdul_guide",
+      "fullName": "ABDUL KHOLIK",
+      "role": "TOUR LEADER GUIDE (HIC1620832016)",
+      "action": "Uploaded Guest Passport Photos for GST-1001",
+      "ipAddress": "114.122.45.89",
+      "userAgent": "Mobile Safari iOS 18.0",
+      "status": "Success"
+    }
+  ],
+  "blogspotConfig": {
+    "blogId": "3136808355151123445",
+    "blogUrl": "https://www.harrisijentourandtravel.com",
+    "employeePageUrl": "https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html",
+    "defaultLabels": "Ijen Tour, Mount Ijen Blue Fire, Harris Ijen, Banyuwangi Travel",
+    "autoPublishReviews": true,
+    "postTitleTemplate": "[Travel Review] {guestName} from {country} - {package}"
+  },
+  "settings": {
+    "companyName": "PT HARRIS IJEN JAYA MANDIRI",
+    "brandName": "Harris Ijen Tour & Travel",
+    "tagline": "Hukum • Travel Agent • Jasa Visa • Banyuwangi, Jawa Timur",
+    "address": "Jl. Raya Ijen No. 88, Licin, Banyuwangi, Jawa Timur 68454",
+    "phone": "+62 812-3456-7890",
+    "email": "info@harrisijentourandtravel.com",
+    "website": "https://www.harrisijentourandtravel.com",
+    "employeeDirectoryUrl": "https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html",
+    "googleSheetSyncUrl": "",
+    "autoSyncIntervalMinutes": 5,
+    "lastSyncTime": "2026-10-21T23:50:00Z"
+  }
+}
