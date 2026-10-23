@@ -587,32 +587,16 @@
   <script src="assets/js/reviews.js"></script>
   <script src="assets/js/app.js"></script>
 
-  <!-- ==================== AUTO-RESIZE SCRIPT FOR BLOGSPOT IFRAME ==================== -->
+  <!-- ==================== SAFE AUTO-RESIZE SCRIPT ==================== -->
   <script>
-    function sendHeightToParent() {
-      var bodyHeight = document.body ? document.body.scrollHeight : 0;
-      var docHeight = document.documentElement ? document.documentElement.scrollHeight : 0;
-      var actualHeight = Math.max(bodyHeight, docHeight);
-
-      if (window.parent && actualHeight > 0) {
+    window.addEventListener('load', function() {
+      if (window.parent) {
         window.parent.postMessage({
           type: 'HARRIS_PORTAL_RESIZE',
-          height: actualHeight
+          height: document.body.scrollHeight || 900
         }, '*');
       }
-    }
-
-    // Kirim tinggi saat dimuat & diubah ukurannya
-    window.addEventListener('load', sendHeightToParent);
-    window.addEventListener('resize', sendHeightToParent);
-
-    // Pantau perubahan konten dinamis secara real-time
-    if (window.ResizeObserver) {
-      var ro = new ResizeObserver(sendHeightToParent);
-      ro.observe(document.body);
-    } else {
-      setInterval(sendHeightToParent, 1000);
-    }
+    });
   </script>
 </body>
 </html>
