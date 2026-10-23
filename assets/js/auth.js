@@ -18,8 +18,8 @@ const SYSTEM_USERS = [
     role: 'director',
     roleLabel: 'Company Leadership (Director)',
     avatar: 'assets/img/logo.png',
-    profileUrl: 'https://www.harrisijentourandtravel.com/p/i-gusti-haris-pradana-sh.html',
-    phone: '+62 812-3456-7890',
+    profileUrl: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggoKdqmT1lUVukLiMufm-QF3sbBPSVuYcaa3rnLTY85A9faZ85CkJZotcdQuA75uBNBpdJOeI0-ehYN_zxepR3LTwrUHQ8ScQjI14psDg6Vc6bshSnz9DZWAkyyM7xlB77j4kAyPUYptGpqfPOFBsG-J6RW8tF4ma0-Q3mJ6_jOHJKOjRowDenYSboPDg/s450/i-gusti-nyoman-haris-pradana11.jpg',
+    phone: '+62 812-4994-9035',
     permissions: ['all']
   },
   {
@@ -129,7 +129,7 @@ const SYSTEM_USERS = [
     position: 'SYSTEM ADMINISTRATOR',
     role: 'admin',
     roleLabel: 'Company Administrator',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=CompanyAdmin',
+    avatar: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvAZltJDE2L2lJriYeJvYcUAc6As8Xk35glSlZiSUBVjgrXsIiVmJkbGGd0_It8EmTWZsbpzXKYkv3mauCyL85V8KV46KKUlDKLjVXplF1iB1j6R2VWXWVm6dgtJke09OVcwJ-D9f-EsQauVVq0xEa4xr9Imk8bPEtUP2Ul9Dvpaw5III199pVP6AnCjU/s450/i-putu-putra-arythan.jpg',
     profileUrl: 'https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html',
     phone: '+62 812-3456-7899',
     permissions: ['all']
