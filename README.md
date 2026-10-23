@@ -142,4 +142,5 @@ k:\My Drive\APPS_DOLAN_IJEN_TOURS/
 ---
 
 *PT HARRIS IJEN JAYA MANDIRI • Harris Ijen Tour and Travel*  
-*Jl. Raya Ijen No. 88, Licin, Banyuwangi, Jawa Timur, Indonesia*
+*JL. KENJO GLONDOK NO 06, DUSUN GLONDOK RT 001 RW 001, Desa/Kelurahan Licin,district Licin, Kab. Banyuwangi
+East Java Province, Postal Code 68454.*
