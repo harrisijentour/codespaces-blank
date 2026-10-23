@@ -31,7 +31,7 @@ const SYSTEM_USERS = [
     position: 'MARKETING MANAGER',
     role: 'admin',
     roleLabel: 'Marketing Manager & Admin',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=IdaAyu&gender=female',
+    avatar: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwi69P3oWubV8uOhFE_O3a4sBs3cbfxADm3LDACsZQvDWwio9tMlQV3rjA968I6HPF5-tCLGHJbdYS0LGJ1fiespnr5dhCIjK9uDkCKfInJpXGFqG_9vnPYDkhIcSiWm6bvIXozX8innDOWzG9UmqK-S2w_9ecfulqvHlJiDtj16M64iUO-hxUNAKpfes/s450/ida-ayu-putri-saraswati.jpg',
     profileUrl: 'https://www.harrisijentourandtravel.com/p/ida-ayu-putri-saraswati-sh-llm.html',
     phone: '+62 813-9876-5432',
     permissions: ['guests', 'invoices', 'scanner', 'cancellations', 'discounts', 'approve_discount', 'reviews', 'finance', 'audit_logs', 'files', 'blogspot', 'settings']
@@ -45,7 +45,7 @@ const SYSTEM_USERS = [
     position: 'BRAND MANAGER',
     role: 'admin',
     roleLabel: 'Brand Manager',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Nurina&gender=female',
+    avatar: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIvRNqIr9GkqQRDKDlOKL9LbTrxrWwxf4V29-TBt1BtBAb1Pcly-BfVwa9sLqbgr3T9RZACy_lROdWGOmLLjPQYHxQPTb-XVwIkfdOf3e4SvUu2UB_WLkj1ZFWJE37mhy9NDaOQjKGGhfbjYLubnC_lU_jHyVqqZG-Grl3jAOf_btdboMjL_nVPbkl0eM/s320/NURINA-YULIANA-SH.jpg,
     profileUrl: 'https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html',
     phone: '+62 812-7788-9900',
     permissions: ['guests', 'invoices', 'scanner', 'cancellations', 'discounts', 'approve_discount', 'reviews', 'files', 'blogspot']
