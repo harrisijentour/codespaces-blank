@@ -177,7 +177,7 @@ class HarrisInvoiceService {
     doc.setFontSize(8);
     doc.setTextColor(100, 116, 139);
     doc.text('Hukum • Travel Agent • Jasa Visa • Banyuwangi - East Java', 44, 34);
-    doc.text('Jl. Raya Ijen No. 88, Licin, Banyuwangi | Phone: +62 812-3456-7890', 44, 38);
+    doc.text('JL. KENJO GLONDOK NO 06, DUSUN GLONDOK RT 001 RW 001, Desa/Kelurahan Licin,district Licin, Kab. Banyuwangi 68454. | Phone: +62 812-4994-9035', 44, 38);
     doc.text('Website: https://www.harrisijentourandtravel.com | Directory: HIC2502982017', 44, 42);
 
     // Invoice Title & Status
