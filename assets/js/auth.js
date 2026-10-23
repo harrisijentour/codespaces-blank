@@ -17,7 +17,7 @@ const SYSTEM_USERS = [
     position: 'BUSINESS OWNER & FOUNDER',
     role: 'director',
     roleLabel: 'Company Leadership (Director)',
-    avatar: 'assets/img/logo.png',
+    avatar: 'assets/img/i-gusti-nyoman-haris-pradana11.jpg',
     profileUrl: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggoKdqmT1lUVukLiMufm-QF3sbBPSVuYcaa3rnLTY85A9faZ85CkJZotcdQuA75uBNBpdJOeI0-ehYN_zxepR3LTwrUHQ8ScQjI14psDg6Vc6bshSnz9DZWAkyyM7xlB77j4kAyPUYptGpqfPOFBsG-J6RW8tF4ma0-Q3mJ6_jOHJKOjRowDenYSboPDg/s450/i-gusti-nyoman-haris-pradana11.jpg',
     phone: '+62 812-4994-9035',
     permissions: ['all']
@@ -31,7 +31,7 @@ const SYSTEM_USERS = [
     position: 'MARKETING MANAGER',
     role: 'admin',
     roleLabel: 'Marketing Manager & Admin',
-    avatar: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwi69P3oWubV8uOhFE_O3a4sBs3cbfxADm3LDACsZQvDWwio9tMlQV3rjA968I6HPF5-tCLGHJbdYS0LGJ1fiespnr5dhCIjK9uDkCKfInJpXGFqG_9vnPYDkhIcSiWm6bvIXozX8innDOWzG9UmqK-S2w_9ecfulqvHlJiDtj16M64iUO-hxUNAKpfes/s450/ida-ayu-putri-saraswati.jpg',
+    avatar: 'assets/img/ida-ayu-putri-saraswati.jpg',
     profileUrl: 'https://www.harrisijentourandtravel.com/p/ida-ayu-putri-saraswati-sh-llm.html',
     phone: '+62 813-9876-5432',
     permissions: ['guests', 'invoices', 'scanner', 'cancellations', 'discounts', 'approve_discount', 'reviews', 'finance', 'audit_logs', 'files', 'blogspot', 'settings']
@@ -45,7 +45,7 @@ const SYSTEM_USERS = [
     position: 'BRAND MANAGER',
     role: 'admin',
     roleLabel: 'Brand Manager',
-    avatar: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIvRNqIr9GkqQRDKDlOKL9LbTrxrWwxf4V29-TBt1BtBAb1Pcly-BfVwa9sLqbgr3T9RZACy_lROdWGOmLLjPQYHxQPTb-XVwIkfdOf3e4SvUu2UB_WLkj1ZFWJE37mhy9NDaOQjKGGhfbjYLubnC_lU_jHyVqqZG-Grl3jAOf_btdboMjL_nVPbkl0eM/s320/NURINA-YULIANA-SH.jpg,
+    avatar: 'assets/img/NURINA-YULIANA-SH.jpg',
     profileUrl: 'https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html',
     phone: '+62 812-7788-9900',
     permissions: ['guests', 'invoices', 'scanner', 'cancellations', 'discounts', 'approve_discount', 'reviews', 'files', 'blogspot']
@@ -87,7 +87,7 @@ const SYSTEM_USERS = [
     position: 'BALI SENIOR SUPERVISOR',
     role: 'staff',
     roleLabel: 'Bali Senior Supervisor',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Samsul',
+    avatar: 'assets/img/samson-west-bali-samsul-maarif.jpg',
     profileUrl: 'https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html',
     phone: '+62 851-0022-3344',
     permissions: ['guests', 'invoices', 'scanner', 'discounts', 'files', 'reviews']
@@ -129,7 +129,7 @@ const SYSTEM_USERS = [
     position: 'SYSTEM ADMINISTRATOR',
     role: 'admin',
     roleLabel: 'Company Administrator',
-    avatar: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvAZltJDE2L2lJriYeJvYcUAc6As8Xk35glSlZiSUBVjgrXsIiVmJkbGGd0_It8EmTWZsbpzXKYkv3mauCyL85V8KV46KKUlDKLjVXplF1iB1j6R2VWXWVm6dgtJke09OVcwJ-D9f-EsQauVVq0xEa4xr9Imk8bPEtUP2Ul9Dvpaw5III199pVP6AnCjU/s450/i-putu-putra-arythan.jpg',
+    avatar: 'assets/img/logo.png',
     profileUrl: 'https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html',
     phone: '+62 812-3456-7899',
     permissions: ['all']
