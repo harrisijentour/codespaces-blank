@@ -59,7 +59,8 @@ const SEED_DATA_V2 = {
       phone: '+61 412 345 678',
       email: 'johnson.daniel@example.com',
       passportNumber: 'PA7731294',
-      passportPhoto: DEMO_PASSPORT_PHOTO_2,
+      passportPhoto: Sophie Moreau
+,
       gender: 'Male',
       numberOfPeople: 2,
       passengers: [
@@ -329,7 +330,7 @@ const SEED_DATA_V2 = {
         communication: 5
       },
       helpfulCount: 9,
-      avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces',
+      avatarUrl: 'https://imgur.com/a/kdIw2AA',
       response: {
         date: 'September 9, 2025',
         author: 'PT HARRIS IJEN JAYA MANDIRI Operations',
