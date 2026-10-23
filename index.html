@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <!-- Active User Profile Section (Requirement 4: Top-left avatar & Employee ID) -->
+    <!-- Active User Profile Section -->
     <div class="p-3 border-b border-slate-100" id="sidebarUserProfile">
       <!-- Injected via auth.js & app.js -->
     </div>
@@ -86,14 +86,12 @@
         <span class="flex-1">Guests & Bookings</span>
       </a>
 
-      <!-- Dedicated Discounts & Approvals (Requirement 3 & 5) -->
       <a onclick="app.switchTab('discounts')" id="navItem_discounts" class="nav-link">
         <i class="fa-solid fa-tags w-5 text-center mr-2.5 text-amber-500"></i>
         <span class="flex-1">Discounts & Approvals</span>
         <span id="badgeDiscountCount" class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded-full hidden">0</span>
       </a>
 
-      <!-- Dedicated Uploaded Files & Vault (Requirement 6) -->
       <a onclick="app.switchTab('files')" id="navItem_files" class="nav-link">
         <i class="fa-solid fa-folder-open w-5 text-center mr-2.5 text-blue-600"></i>
         <span class="flex-1">Uploaded Files & Passports</span>
@@ -125,7 +123,6 @@
         <span id="badgeReviewCount" class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">3</span>
       </a>
 
-      <!-- Blogspot Publisher & Embed Code Generator (Requirement 7) -->
       <a onclick="app.switchTab('blogspot')" id="navItem_blogspot" class="nav-link">
         <i class="fa-brands fa-blogger-b w-5 text-center mr-2.5 text-orange-500"></i>
         <span class="flex-1">Blogspot Embed & Post</span>
@@ -152,7 +149,7 @@
       </a>
     </nav>
 
-    <!-- Google Drive Sync Status in Sidebar Footer (Requirement 1) -->
+    <!-- Google Drive Sync Status in Sidebar Footer -->
     <div class="p-3 border-t border-slate-100 bg-slate-50 text-xs">
       <div class="flex items-center justify-between text-slate-500 mb-1">
         <span class="flex items-center space-x-1.5">
@@ -179,7 +176,7 @@
     <!-- Top Header Bar -->
     <header class="bg-white border-b border-slate-200 px-4 py-3 sticky top-0 z-20 flex items-center justify-between">
       
-      <!-- Mobile menu toggle & Mobile Top-Left Profile (Requirement 4) -->
+      <!-- Mobile menu toggle & Mobile Top-Left Profile -->
       <div class="flex items-center space-x-3">
         <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" class="md:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg border border-slate-200">
           <i class="fa-solid fa-bars text-lg"></i>
@@ -313,7 +310,7 @@
         </div>
       </div>
 
-      <!-- ==================== 2. GUESTS & BOOKINGS VIEW (Requirement 2) ==================== -->
+      <!-- ==================== 2. GUESTS & BOOKINGS VIEW ==================== -->
       <div id="view_guests" class="app-view space-y-4 hidden">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
@@ -365,7 +362,7 @@
         </div>
       </div>
 
-      <!-- ==================== 3. DISCOUNTS & APPROVALS (Requirement 3 & 5) ==================== -->
+      <!-- ==================== 3. DISCOUNTS & APPROVALS ==================== -->
       <div id="view_discounts" class="app-view space-y-4 hidden">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
@@ -401,21 +398,19 @@
         </div>
       </div>
 
-      <!-- ==================== 4. UPLOADED FILES & VAULT (Requirement 6) ==================== -->
+      <!-- ==================== 4. UPLOADED FILES & VAULT ==================== -->
       <div id="view_files" class="app-view space-y-4 hidden">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 class="text-lg font-extrabold text-brand-navy">Uploaded Files & Document Vault</h2>
             <p id="filesCountDisplay" class="text-xs text-slate-500">High-resolution viewer for guest passport photos, payment receipts, and documents</p>
           </div>
-          <!-- Search in files -->
           <div class="relative w-full sm:w-64">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 text-xs"></i>
             <input type="text" id="fileSearchInput" placeholder="Search by name or passport..." class="w-full pl-9 pr-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
         </div>
 
-        <!-- Filter tabs for files -->
         <div class="flex items-center space-x-2 text-xs">
           <button id="filterBtn_all" onclick="window.fileVaultService.setFilter('all')" class="file-filter-btn px-3 py-1.5 rounded-lg bg-blue-600 text-white font-bold transition">All Documents</button>
           <button id="filterBtn_passport" onclick="window.fileVaultService.setFilter('passport')" class="file-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 transition">Passport Photos</button>
@@ -423,7 +418,6 @@
           <button id="filterBtn_discount_proof" onclick="window.fileVaultService.setFilter('discount_proof')" class="file-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 transition">Discount Receipts</button>
         </div>
 
-        <!-- Gallery Grid -->
         <div id="filesGalleryGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <!-- Injected via files.js -->
         </div>
@@ -457,7 +451,6 @@
               <button onclick="scannerService.setMode('manual')" id="btnScannerModeManual" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-semibold text-xs hover:bg-slate-200">Manual Token Input</button>
             </div>
 
-            <!-- Camera Scanner Container -->
             <div id="scannerCameraContainer" class="space-y-3">
               <div id="qr-reader" class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 w-full"></div>
               <div class="flex items-center justify-center space-x-2">
@@ -470,7 +463,6 @@
               </div>
             </div>
 
-            <!-- Upload Container -->
             <div id="scannerUploadContainer" class="space-y-3 hidden">
               <div class="border-2 border-dashed border-slate-300 rounded-2xl p-6 text-center hover:bg-slate-50 cursor-pointer" onclick="document.getElementById('scannerFileInput').click()">
                 <i class="fa-solid fa-cloud-arrow-up text-3xl text-slate-400 mb-2 block"></i>
@@ -479,7 +471,6 @@
               </div>
             </div>
 
-            <!-- Manual Token Container -->
             <div id="scannerManualContainer" class="space-y-3 hidden text-xs">
               <label class="block font-bold text-slate-700">Enter Proprietary Signature Token:</label>
               <textarea id="scannerManualTokenInput" rows="3" placeholder="HIJ-SECURE::V2::..." class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl font-mono text-xs"></textarea>
@@ -488,7 +479,6 @@
               </button>
             </div>
 
-            <!-- Verification Result Box -->
             <div id="scannerResultBox" class="hidden p-4 rounded-xl border"></div>
           </div>
         </div>
@@ -531,7 +521,6 @@
 
       <!-- ==================== 8. CUSTOMER REVIEWS VIEW ==================== -->
       <div id="view_reviews" class="app-view space-y-6 hidden">
-        <!-- Top Section matching Reference UI -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 class="text-xl font-extrabold text-brand-navy tracking-tight">Customer Reviews</h2>
@@ -545,7 +534,6 @@
 
         <!-- Metric Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <!-- Overall Rating -->
           <div class="stat-pill-card flex items-center space-x-4">
             <div class="p-3 bg-amber-50 rounded-2xl text-amber-500 text-3xl">
               <i class="fa-solid fa-star"></i>
@@ -559,906 +547,71 @@
             </div>
           </div>
 
-          <!-- 5-Star Percentage -->
           <div class="stat-pill-card flex items-center space-x-4">
             <div class="p-3 bg-emerald-50 rounded-2xl text-emerald-600 text-3xl">
+              <i class="fa-solid fa-face-smile"></i>
+            </div>
+            <div>
+              <div id="reviewMetricPercent" class="text-3xl font-extrabold text-slate-900">100%</div>
+              <div class="text-xs text-slate-500 font-medium">5-star rating satisfaction</div>
+            </div>
+          </div>
+
+          <div class="stat-pill-card flex items-center space-x-4">
+            <div class="p-3 bg-blue-50 rounded-2xl text-blue-600 text-3xl">
               <i class="fa-solid fa-thumbs-up"></i>
             </div>
             <div>
-              <div id="reviewMetricFiveStar" class="text-3xl font-extrabold text-slate-900">100%</div>
-              <div class="text-xs text-slate-500 font-medium">5-Star customer satisfaction</div>
-            </div>
-          </div>
-
-          <!-- Verification Gate -->
-          <div class="stat-pill-card flex items-center space-x-4">
-            <div class="p-3 bg-blue-50 rounded-2xl text-blue-600 text-3xl">
-              <i class="fa-solid fa-shield-check"></i>
-            </div>
-            <div>
-              <div class="text-sm font-bold text-slate-900">Database Guard</div>
-              <div class="text-xs text-slate-500">Reviews restricted to verified reservations</div>
+              <div id="reviewMetricRec" class="text-3xl font-extrabold text-slate-900">100%</div>
+              <div class="text-xs text-slate-500 font-medium">Would recommend to peers</div>
             </div>
           </div>
         </div>
 
-        <!-- Rating Breakdown & Category Ratings -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- Breakdown -->
-          <div class="ui-card p-5 space-y-3">
-            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500">Rating Breakdown</h4>
-            <div id="reviewBreakdownContainer" class="space-y-2 text-xs">
-              <!-- Injected via reviews.js -->
-            </div>
-          </div>
-
-          <!-- Category Averages -->
-          <div class="ui-card p-5 space-y-3">
-            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-500">Category Evaluation</h4>
-            <div class="space-y-3 text-xs">
-              <div>
-                <div class="flex justify-between font-semibold mb-1">
-                  <span>Professionalism of Tour Guides</span>
-                  <span id="catAvgProf" class="text-blue-600 font-bold">5.0 / 5.0</span>
-                </div>
-                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 100%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between font-semibold mb-1">
-                  <span>Quality of Tour & Equipment</span>
-                  <span id="catAvgQual" class="text-blue-600 font-bold">5.0 / 5.0</span>
-                </div>
-                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 100%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between font-semibold mb-1">
-                  <span>Timeliness & Punctuality</span>
-                  <span id="catAvgTime" class="text-blue-600 font-bold">4.8 / 5.0</span>
-                </div>
-                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 96%;"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between font-semibold mb-1">
-                  <span>Communication & Responsiveness</span>
-                  <span id="catAvgComm" class="text-blue-600 font-bold">5.0 / 5.0</span>
-                </div>
-                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 100%;"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Reviews List -->
-        <div class="space-y-4" id="reviewsListContainer">
+        <!-- Reviews List Container -->
+        <div id="reviewsListContainer" class="space-y-4">
           <!-- Injected via reviews.js -->
-        </div>
-      </div>
-
-      <!-- ==================== 9. BLOGSPOT EMBED & PUBLISHER (Requirement 7) ==================== -->
-      <div id="view_blogspot" class="app-view space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-extrabold text-brand-navy tracking-tight">Blogspot Embed & Publisher</h2>
-          <p class="text-xs text-slate-500">Embed this application within a Blogspot post without affecting your default Blogspot template, or publish directly via Blogger API v3.</p>
-        </div>
-
-        <!-- REQUIREMENT 7: Blogspot Post Page Embedding Code Box -->
-        <div class="ui-card p-6 border-2 border-orange-200 bg-gradient-to-br from-white to-orange-50/30 space-y-4">
-          <div class="flex items-center justify-between border-b border-orange-100 pb-3">
-            <div class="flex items-center space-x-2.5">
-              <span class="w-8 h-8 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold">
-                <i class="fa-brands fa-blogger-b"></i>
-              </span>
-              <div>
-                <h3 class="font-extrabold text-sm text-slate-900">Blogspot Post Page Embed Code (Requirement 7)</h3>
-                <p class="text-[11px] text-slate-500">100% Sandbox Isolation • Guaranteed zero impact on your Blogspot theme styles</p>
-              </div>
-            </div>
-            <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">Zero Conflict</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-            <!-- Option A: Responsive Auto-Height Iframe (Recommended) -->
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="font-bold text-slate-800">Method 1: Responsive Iframe Embed (Recommended)</span>
-                <button onclick="window.blogspotService.copyEmbedSnippet('portalIframeSnippet')" class="text-blue-600 hover:underline font-bold text-[11px] flex items-center space-x-1">
-                  <i class="fa-solid fa-copy"></i>
-                  <span>Copy Code</span>
-                </button>
-              </div>
-              <textarea id="portalIframeSnippet" rows="6" readonly class="w-full p-2.5 bg-slate-900 text-emerald-400 font-mono text-[11px] rounded-xl focus:outline-none"></textarea>
-              <p class="text-[11px] text-slate-500">Paste into Blogger Post Editor &rarr; Switch to <strong>HTML view</strong> &rarr; Save & Publish.</p>
-            </div>
-
-            <!-- Option B: Scoped Web Container Code -->
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="font-bold text-slate-800">Method 2: Scoped Card Embed Widget</span>
-                <button onclick="window.blogspotService.copyEmbedSnippet('portalContainerSnippet')" class="text-blue-600 hover:underline font-bold text-[11px] flex items-center space-x-1">
-                  <i class="fa-solid fa-copy"></i>
-                  <span>Copy Code</span>
-                </button>
-              </div>
-              <textarea id="portalContainerSnippet" rows="6" readonly class="w-full p-2.5 bg-slate-900 text-amber-300 font-mono text-[11px] rounded-xl focus:outline-none"></textarea>
-              <p class="text-[11px] text-slate-500">Includes inline <code class="bg-slate-200 px-1 rounded text-slate-800">all: initial</code> CSS reset to protect Blogspot sidebar.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Direct Composer -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div class="ui-card p-5 space-y-4 text-xs">
-            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-              <h4 class="font-bold text-sm text-slate-900">Blogger Post Composer</h4>
-              <div class="space-x-1">
-                <button onclick="window.blogspotService.loadTourPromoTemplate()" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg text-[11px]">Tour Promo</button>
-                <button onclick="window.blogspotService.copyHTML()" class="px-2.5 py-1 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-bold rounded-lg text-[11px]">Copy HTML</button>
-              </div>
-            </div>
-
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Post Title:</label>
-              <input type="text" id="blogPostTitle" placeholder="Post Title for Blogger" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800">
-            </div>
-
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Labels / Tags (comma-separated):</label>
-              <input type="text" id="blogPostLabels" value="Ijen Tour, Mount Ijen Blue Fire, Harris Ijen, Banyuwangi Travel" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800">
-            </div>
-
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">HTML Post Content:</label>
-              <textarea id="blogPostContent" rows="8" oninput="window.blogspotService.updatePreview()" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl font-mono text-xs text-slate-800"></textarea>
-            </div>
-
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
-              <input type="text" id="bloggerAccessToken" placeholder="Optional: Google OAuth2 Token" class="w-1/2 p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs">
-              <button onclick="window.blogspotService.publishDirectlyToBlogger()" id="btnPublishBlogspot" class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-xl shadow transition">
-                <i class="fa-brands fa-blogger-b mr-1"></i> Publish to Blogspot
-              </button>
-            </div>
-          </div>
-
-          <!-- Live Preview -->
-          <div class="ui-card p-5 space-y-3">
-            <div class="border-b border-slate-100 pb-2">
-              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Live Preview inside Blogspot</span>
-              <h3 id="blogPreviewTitle" class="font-bold text-base text-slate-900 mt-1">Post Preview</h3>
-            </div>
-            <div id="blogPostPreview" class="border border-slate-100 rounded-xl p-4 bg-slate-50/50 max-h-[500px] overflow-y-auto">
-              <!-- Live preview -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ==================== 10. FINANCIAL MODULE (Restricted) ==================== -->
-      <div id="view_finance" class="app-view space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-extrabold text-brand-navy tracking-tight">Financial Ledger & Analytics</h2>
-          <p class="text-xs text-slate-500">Restricted to Company Leadership & Administrators</p>
-        </div>
-        <div id="financeModuleContainer">
-          <!-- Injected via finance.js -->
-        </div>
-      </div>
-
-      <!-- ==================== 11. LOGIN AUDIT & STAFF MONITORING (Restricted) ==================== -->
-      <div id="view_audit" class="app-view space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-extrabold text-brand-navy tracking-tight">Staff Login Audit & Security</h2>
-          <p class="text-xs text-slate-500">Restricted to Company Leadership • Tracking authentication attempts and IP addresses</p>
-        </div>
-        <div id="auditModuleContainer">
-          <!-- Injected via audit.js -->
-        </div>
-      </div>
-
-      <!-- ==================== 12. GOOGLE DRIVE & SHEETS SYNC ==================== -->
-      <div id="view_settings" class="app-view space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-extrabold text-brand-navy tracking-tight">Google Drive & Google Sheets Cloud Sync</h2>
-          <p class="text-xs text-slate-500">Automatic two-way cloud persistence for PT HARRIS IJEN JAYA MANDIRI</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="ui-card p-5 space-y-4 text-xs">
-            <h4 class="font-bold text-sm text-slate-900 border-b border-slate-100 pb-2 flex items-center">
-              <i class="fa-brands fa-google-drive text-emerald-600 text-base mr-2"></i>
-              Google Apps Script Cloud Endpoint
-            </h4>
-            <p class="text-slate-600 leading-relaxed">
-              To link with a live Google Sheet and Drive folder, deploy <code class="bg-slate-100 px-1 py-0.5 rounded text-blue-700 font-mono">google-apps-script/Code.gs</code> as a Web App in Google Sheets, then paste the URL below:
-            </p>
-            <div>
-              <label class="block font-bold text-slate-700 mb-1">Google Apps Script Web App URL:</label>
-              <input type="url" id="googleSheetUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono text-xs">
-            </div>
-            <div class="flex items-center space-x-2">
-              <button onclick="saveGoogleSheetSettings()" class="px-4 py-2 bg-brand-navy hover:bg-brand-blue text-white font-bold rounded-xl shadow transition">
-                Save & Connect Cloud
-              </button>
-            </div>
-          </div>
-
-          <div class="ui-card p-5 space-y-4 text-xs">
-            <h4 class="font-bold text-sm text-slate-900 border-b border-slate-100 pb-2 flex items-center">
-              <i class="fa-solid fa-database text-blue-600 text-base mr-2"></i>
-              Database Backup & Recovery
-            </h4>
-            <p class="text-slate-600 leading-relaxed">
-              Export complete JSON database or restore from a previously exported backup file:
-            </p>
-            <div class="flex flex-wrap items-center gap-2">
-              <button onclick="db.exportDatabaseJSON()" class="px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow transition flex items-center space-x-1.5">
-                <i class="fa-solid fa-download"></i>
-                <span>Download Database JSON</span>
-              </button>
-              <button onclick="document.getElementById('importDbInput').click()" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition flex items-center space-x-1.5">
-                <i class="fa-solid fa-upload"></i>
-                <span>Import JSON</span>
-              </button>
-              <input type="file" id="importDbInput" accept=".json" class="hidden" onchange="handleImportDatabase(event)">
-            </div>
-            <div class="pt-3 border-t border-slate-100">
-              <button onclick="if(confirm('Reset all portal data to official defaults?')) { db.resetToDefault(); location.reload(); }" class="text-rose-600 hover:underline font-bold text-[11px]">
-                Reset Database to Factory Defaults
-              </button>
-            </div>
-          </div>
         </div>
       </div>
 
     </main>
   </div>
 
-  <!-- ======================================================== -->
-  <!-- MODALS & POPUPS                                          -->
-  <!-- ======================================================== -->
-
-  <!-- 1. LOGIN MODAL (Requirement 1 & 4) -->
-  <div id="loginModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl border border-slate-100">
-      
-      <!-- Brand & Title -->
-      <div class="text-center mb-6">
-        <img src="assets/img/logo.png" alt="Harris Ijen Logo" class="w-16 h-16 object-contain mx-auto mb-3 drop-shadow">
-        <h3 class="font-extrabold text-lg text-brand-navy">Harris Ijen Admin Portal</h3>
-        <p class="text-xs text-brand-gold font-bold uppercase tracking-wider">PT HARRIS IJEN JAYA MANDIRI</p>
-        <p class="text-[11px] text-slate-500 mt-1">Log in using your User ID or Official Employee Number</p>
-      </div>
-
-      <form onsubmit="app.handleLogin(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">User ID / Employee Number *:</label>
-          <div class="relative">
-            <i class="fa-solid fa-id-badge absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
-            <input type="text" id="loginUsername" required placeholder="e.g. HIC2502982017 or haris_director" class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-mono focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-        </div>
-
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Password *:</label>
-          <div class="relative">
-            <i class="fa-solid fa-key absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
-            <input type="password" id="loginPassword" required placeholder="••••••••" class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-        </div>
-
-        <div class="flex items-center justify-between text-[11px]">
-          <label class="flex items-center space-x-1.5 cursor-pointer text-slate-600">
-            <input type="checkbox" id="loginRememberMe" class="rounded text-blue-600">
-            <span>Remember login</span>
-          </label>
-          <a href="https://www.harrisijentourandtravel.com/p/employee-data-pt-harris-ijen-jaya.html" target="_blank" class="text-blue-600 hover:underline font-bold">
-            Lookup Employee ID
-          </a>
-        </div>
-
-        <button type="submit" class="w-full py-2.5 bg-brand-navy hover:bg-brand-blue text-white font-bold rounded-xl shadow transition">
-          Secure Portal Log In
-        </button>
-      </form>
-
-      <!-- Quick 1-Click Employee Switcher from Official PT Harris Ijen Jaya Directory -->
-      <div class="mt-6 pt-4 border-t border-slate-100">
-        <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 text-center mb-2.5">
-          Or Quick Log In with Verified Official Accounts:
-        </div>
-        <div class="grid grid-cols-2 gap-2 text-xs">
-          <button type="button" onclick="app.quickDemoLogin('HIC2502982017')" class="p-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-left transition">
-            <div class="font-extrabold text-slate-900 truncate">M. ABDUL HARIS</div>
-            <div class="text-[10px] text-brand-gold font-bold truncate">HIC2502982017 (Owner)</div>
-          </button>
-          <button type="button" onclick="app.quickDemoLogin('HIC2104682023')" class="p-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-left transition">
-            <div class="font-extrabold text-slate-900 truncate">IDA AYU PUTRI</div>
-            <div class="text-[10px] text-blue-600 font-bold truncate">HIC2104682023 (Marketing)</div>
-          </button>
-          <button type="button" onclick="app.quickDemoLogin('HIC1620832016')" class="p-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-left transition">
-            <div class="font-extrabold text-slate-900 truncate">ABDUL KHOLIK</div>
-            <div class="text-[10px] text-emerald-600 font-bold truncate">HIC1620832016 (Guide)</div>
-          </button>
-          <button type="button" onclick="app.quickDemoLogin('HIC1620852024')" class="p-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-left transition">
-            <div class="font-extrabold text-slate-900 truncate">ANDIKA EKA</div>
-            <div class="text-[10px] text-slate-600 font-bold truncate">HIC1620852024 (Guide)</div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. GUEST DATA INPUT / EDIT MODAL (Requirement 2) -->
-  <div id="guestInputModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-3xl w-full p-6 shadow-2xl border border-slate-100 max-h-[92vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <div>
-          <h3 id="guestModalTitle" class="font-extrabold text-base text-brand-navy">Input Guest Data & Reservation</h3>
-          <p class="text-xs text-slate-500">Record comprehensive traveler details, passports, and drop-off locations directly to Google Drive DB</p>
-        </div>
-        <button onclick="document.getElementById('guestInputModal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 p-1">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <form id="guestForm" onsubmit="app.handleSaveGuest(event)" class="space-y-4 text-xs">
-        
-        <!-- Row 1: Guest Name, Gender, Number of People (Pax) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div class="sm:col-span-1">
-            <label class="block font-bold text-slate-700 mb-1">Lead Guest Name *:</label>
-            <input type="text" id="inputGuestName" required placeholder="e.g. Klaus Schmidt" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Gender *:</label>
-            <select id="inputGender" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Number of People (Pax) *:</label>
-            <select id="inputNumberOfPeople" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-bold text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="1">1 Person (Solo)</option>
-              <option value="2">2 Persons (Couple)</option>
-              <option value="3">3 Persons</option>
-              <option value="4">4 Persons (Family)</option>
-              <option value="5">5 Persons</option>
-              <option value="6">6 Persons (Group)</option>
-              <option value="8">8 Persons</option>
-              <option value="10">10+ Persons (Large Group)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Row 2: Passport Number & Passport Photo Upload (Requirement 2 & 6) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 bg-blue-50/40 rounded-2xl border border-blue-100">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Passport / ID Number *:</label>
-            <input type="text" id="inputPassport" required placeholder="e.g. C19283746" class="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 font-mono font-bold text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Upload Passport Photo (Requirement 2 & 6):</label>
-            <input type="file" id="inputPassportPhoto" accept="image/*" class="w-full bg-white border border-slate-200 rounded-xl px-3 py-1.5 text-slate-600 text-xs">
-            <!-- Thumbnail preview -->
-            <div id="passportPhotoPreview" class="mt-2 flex items-center space-x-2 hidden">
-              <img id="passportPhotoPreviewImg" src="" class="w-12 h-12 object-cover rounded-lg border border-slate-300">
-              <span class="text-[11px] text-emerald-700 font-bold"><i class="fa-solid fa-check-circle"></i> Photo Ready</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dynamic Additional Passenger Rows Container -->
-        <div id="extraPassengersContainer"></div>
-
-        <!-- Row 3: Country, Phone, Email -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Country of Origin *:</label>
-            <input type="text" id="inputCountry" required placeholder="e.g. Germany" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Phone / WhatsApp *:</label>
-            <input type="text" id="inputPhone" required placeholder="+49 151 234567" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Email Address *:</label>
-            <input type="email" id="inputEmail" required placeholder="klaus@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-        </div>
-
-        <!-- Row 4: Invoice Number & Tour Package Name -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Invoice Number *:</label>
-            <input type="text" id="inputInvoiceNumber" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-mono font-bold text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Tour Package Name *:</label>
-            <select id="inputTourPackage" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="Ijen Blue Fire Midnight Tour & Sunrise">Ijen Blue Fire Midnight Tour & Sunrise</option>
-              <option value="Mount Bromo & Ijen Crater Overland 3D2N">Mount Bromo & Ijen Crater Overland 3D2N</option>
-              <option value="Baluran African Van Java Safari & Ijen Tour">Baluran African Van Java Safari & Ijen Tour</option>
-              <option value="Banyuwangi Heritage, Jagir Waterfall & Ijen">Banyuwangi Heritage, Jagir Waterfall & Ijen</option>
-              <option value="Ijen Blue Fire Family VIP Package">Ijen Blue Fire Family VIP Package</option>
-              <option value="Custom Private Tour East Java">Custom Private Tour East Java</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Row 5: Payment Amount, Method, Payment Status, Payment Location -->
-        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Payment Amount (IDR) *:</label>
-            <input type="number" id="inputPaymentAmount" required min="0" placeholder="2500000" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Payment Method *:</label>
-            <select id="inputPaymentMethod" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="Credit Card">Credit Card</option>
-              <option value="Bank Transfer (BCA)">Bank Transfer (BCA)</option>
-              <option value="Bank Transfer (Mandiri)">Bank Transfer (Mandiri)</option>
-              <option value="Wise Transfer">Wise Transfer</option>
-              <option value="PayPal">PayPal</option>
-              <option value="Cash on Arrival">Cash on Arrival</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Payment Status *:</label>
-            <select id="inputPaymentStatus" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="Paid in Full">Paid in Full</option>
-              <option value="Partial / Deposit">Partial / Deposit</option>
-              <option value="Pending">Pending</option>
-              <option value="Refund Requested">Refund Requested</option>
-              <option value="Refunded">Refunded</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Payment Location *:</label>
-            <select id="inputPaymentLocation" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="Banyuwangi HQ Office">Banyuwangi HQ Office</option>
-              <option value="Bali Branch Office">Bali Branch Office</option>
-              <option value="Paltuding Base Camp">Paltuding Base Camp</option>
-              <option value="Online Payment Gateway">Online Payment Gateway</option>
-              <option value="Hotel Santika Lobby">Hotel Santika Lobby</option>
-              <option value="Banyuwangi Airport (BWX)">Banyuwangi Airport (BWX)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Row 6: Arrival Time, Pickup Time & Location, FINAL DROP-OFF LOCATION (Requirement 2) -->
-        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Arrival Date & Time *:</label>
-            <input type="datetime-local" id="inputArrivalTime" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Pickup Time *:</label>
-            <input type="text" id="inputPickupTime" required placeholder="00:30 AM" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Pickup Location *:</label>
-            <input type="text" id="inputPickupLocation" required placeholder="Hotel Santika Lobby" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Final Drop-off Location *:</label>
-            <input type="text" id="inputFinalDropOffLocation" required placeholder="Ketapang Port / Airport" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 font-bold text-emerald-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-        </div>
-
-        <!-- Special Notes -->
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Special Notes / Dietary / Gear Requests:</label>
-          <textarea id="inputSpecialNotes" rows="2" placeholder="e.g. Warm jacket provided, gas mask size M, troli booking" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-
-        <div class="flex items-center justify-end space-x-2 pt-3 border-t border-slate-100">
-          <button type="button" onclick="document.getElementById('guestInputModal').classList.add('hidden')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl">
-            Cancel
-          </button>
-          <button type="submit" class="px-5 py-2 bg-brand-navy hover:bg-brand-blue text-white font-bold rounded-xl shadow transition">
-            Save Traveler to Google Drive DB
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- 3. DEDICATED DISCOUNT REQUEST MODAL (Requirement 5) -->
-  <div id="modalRequestDiscount" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <div>
-          <h3 class="font-extrabold text-base text-amber-900">Request Discount on Booking (Requirement 5)</h3>
-          <p class="text-xs text-slate-500">Requires uploading proof of payment image & reference number into system</p>
-        </div>
-        <button onclick="document.getElementById('modalRequestDiscount').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 p-1">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <form onsubmit="window.discountService.handleRequestSubmit(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Select Guest Reservation *:</label>
-          <select id="discGuestSelect" onchange="window.discountService.onGuestSelected(this.value)" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-800 font-medium">
-            <!-- Dynamically populated -->
-          </select>
-        </div>
-
-        <input type="hidden" id="discOrigAmountInput">
-        <input type="hidden" id="discInvoiceNoInput">
-        <input type="hidden" id="discGuestNameInput">
-
-        <!-- Price Display Card -->
-        <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between">
-          <div>
-            <span class="text-slate-500 font-semibold block text-[11px]">Original Booking Amount:</span>
-            <span id="discOrigAmountDisplay" class="font-bold text-sm text-slate-800">IDR 0</span>
-          </div>
-          <div class="text-right">
-            <span class="text-slate-500 font-semibold block text-[11px]">Revised Final Price:</span>
-            <span id="discFinalAmountDisplay" class="font-extrabold text-sm text-emerald-700">IDR 0</span>
-          </div>
-        </div>
-
-        <!-- Discount Specification -->
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Discount Type *:</label>
-            <select id="discTypeSelect" onchange="window.discountService.recalculateDiscount()" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2 text-slate-800">
-              <option value="percentage">Percentage (%)</option>
-              <option value="fixed">Fixed IDR Amount</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">Discount Value *:</label>
-            <input type="number" id="discValueInput" oninput="window.discountService.recalculateDiscount()" required min="1" value="10" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2 font-bold text-amber-700">
-          </div>
-        </div>
-
-        <!-- Mandatory Payment Reference Number (Requirement 5) -->
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Payment Reference Number * (Requirement 5):</label>
-          <input type="text" id="discPaymentRef" required placeholder="e.g. TRX-BCA-982144791 or BANK-REF-001" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 font-mono font-bold text-blue-900">
-        </div>
-
-        <!-- Mandatory Proof of Payment Upload (Requirement 5) -->
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Upload Proof of Payment (Image) * (Requirement 5):</label>
-          <input type="file" id="discProofInput" accept="image/*" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2 text-slate-600">
-          
-          <div id="discProofPreview" class="mt-2.5 p-2 bg-slate-100 rounded-xl border border-slate-200 hidden flex items-center space-x-3">
-            <img id="discProofPreviewImg" src="" class="w-14 h-14 object-contain rounded-lg bg-white border border-slate-200">
-            <div>
-              <span class="font-bold text-emerald-700 text-xs flex items-center">
-                <i class="fa-solid fa-circle-check mr-1"></i> Proof Image Attached
-              </span>
-              <span class="text-[10px] text-slate-500">Will be archived to Google Drive and viewable in file vault</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Stated Reason -->
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Reason for Discount Request *:</label>
-          <textarea id="discReason" required rows="2" placeholder="e.g. Early Bird Promo, Travel Agent Partner rate, Family Bundle" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-800"></textarea>
-        </div>
-
-        <div class="flex items-center justify-between pt-3 border-t border-slate-100">
-          <span id="discCalculatedDeduction" class="font-bold text-amber-600 text-xs">- IDR 0</span>
-          <div class="space-x-2">
-            <button type="button" onclick="document.getElementById('modalRequestDiscount').classList.add('hidden')" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl">
-              Cancel
-            </button>
-            <button type="submit" class="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl shadow transition">
-              Submit for Management Approval
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- 4. DISCOUNT APPROVAL MODAL (Requirement 3) -->
-  <div id="modalApproveDiscount" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <div>
-          <h3 class="font-extrabold text-base text-brand-navy">Management Discount Approval (Requirement 3)</h3>
-          <p class="text-xs text-slate-500">Authorized exclusively for Company Leadership & Administrators</p>
-        </div>
-        <button onclick="document.getElementById('modalApproveDiscount').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 p-1">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-      <div id="approveDiscountContent">
-        <!-- Injected via discounts.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- 5. HIGH-RESOLUTION FILE LIGHTBOX VIEWER (Requirement 6) -->
-  <div id="modalFileLightbox" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden">
-    <div class="relative max-w-4xl w-full flex flex-col items-center">
-      
-      <!-- Top Control Bar -->
-      <div class="w-full flex items-center justify-between text-white pb-3 mb-2 border-b border-white/10">
-        <div>
-          <h3 id="lightboxTitle" class="font-extrabold text-sm tracking-tight text-white">Document Viewer</h3>
-          <p id="lightboxSubtitle" class="text-xs text-slate-400"></p>
-        </div>
-        <div class="flex items-center space-x-2">
-          <!-- Zoom Controls -->
-          <button onclick="window.fileVaultService.zoomIn()" class="p-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-xs transition" title="Zoom In (+)">
-            <i class="fa-solid fa-magnifying-glass-plus"></i>
-          </button>
-          <span id="lightboxZoomText" class="text-xs font-mono px-1">100%</span>
-          <button onclick="window.fileVaultService.zoomOut()" class="p-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-xs transition" title="Zoom Out (-)">
-            <i class="fa-solid fa-magnifying-glass-minus"></i>
-          </button>
-          <button onclick="window.fileVaultService.rotateRight()" class="p-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-xs transition" title="Rotate 90° (R)">
-            <i class="fa-solid fa-rotate-right"></i>
-          </button>
-          <button onclick="window.fileVaultService.resetTransform()" class="p-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-xs transition" title="Reset View">
-            <i class="fa-solid fa-compress"></i>
-          </button>
-          <button onclick="window.fileVaultService.downloadCurrentFile()" class="p-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg text-white text-xs transition" title="Download Document">
-            <i class="fa-solid fa-download"></i>
-          </button>
-          <button onclick="window.fileVaultService.closeLightbox()" class="p-2 bg-rose-600 hover:bg-rose-700 rounded-lg text-white text-xs transition" title="Close (Esc)">
-            <i class="fa-solid fa-xmark text-sm"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Image Canvas Area -->
-      <div id="lightboxImageContainer" class="w-full h-[70vh] bg-slate-900/60 rounded-2xl flex items-center justify-center p-4 border border-white/10 overflow-hidden">
-        <img id="lightboxImage" src="" alt="Document" class="max-h-full max-w-full object-contain drop-shadow-2xl">
-      </div>
-    </div>
-  </div>
-
-  <!-- 6. SINGLE GUEST FILES LIST MODAL (Requirement 6) -->
-  <div id="modalGuestFilesList" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl border border-slate-100">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <h3 id="guestFilesModalTitle" class="font-extrabold text-sm text-brand-navy">Uploaded Files for Guest</h3>
-        <button onclick="document.getElementById('modalGuestFilesList').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-      <div id="guestFilesListContent">
-        <!-- Injected via files.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. INVOICE PREVIEW MODAL -->
-  <div id="invoicePreviewModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-2xl w-full p-6 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <h3 class="font-extrabold text-base text-brand-navy">Official E-Invoice & Cryptographic Signature</h3>
-        <button onclick="document.getElementById('invoicePreviewModal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-      <div id="invoicePreviewContent">
-        <!-- Injected via app.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- 8. CANCELLATION REQUEST MODAL -->
-  <div id="modalRequestCancellation" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-100">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <div>
-          <h3 class="font-extrabold text-base text-rose-700">Submit Cancellation & Refund Request</h3>
-          <p class="text-xs text-slate-500">Requires stated reason & company leadership approval</p>
-        </div>
-        <button onclick="document.getElementById('modalRequestCancellation').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <form onsubmit="handleCancellationSubmit(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Select Guest / Booking *:</label>
-          <select id="cancelGuestSelect" onchange="cancellationService.onGuestSelected(this.value)" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-slate-800">
-            <!-- Dynamically populated -->
-          </select>
-        </div>
-
-        <input type="hidden" id="cancelOrigAmount">
-        <input type="hidden" id="cancelInvoiceNo">
-        <input type="hidden" id="cancelGuestName">
-
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Stated Reason for Cancellation *:</label>
-          <textarea id="cancelReason" required rows="3" placeholder="Provide detailed justification (e.g., flight cancellation, medical illness)" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-800"></textarea>
-        </div>
-
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Refund Policy Percentage (%):</label>
-          <div class="flex items-center space-x-3">
-            <input type="range" id="cancelPercentSlider" min="0" max="100" step="5" value="80" oninput="cancellationService.updateRefundCalculation(this.value)" class="flex-1">
-            <span id="cancelPercentLabel" class="font-bold text-slate-900 w-12 text-right">80%</span>
-          </div>
-        </div>
-
-        <div class="p-3 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-between text-xs">
-          <span class="text-slate-600 font-semibold">Calculated Refund Payout:</span>
-          <span id="cancelRefundAmountDisplay" class="font-bold text-rose-700 text-sm">IDR 0</span>
-        </div>
-
-        <div class="flex items-center justify-end space-x-2 pt-3 border-t border-slate-100">
-          <button type="button" onclick="document.getElementById('modalRequestCancellation').classList.add('hidden')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl">
-            Cancel
-          </button>
-          <button type="submit" class="px-5 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl shadow transition">
-            Submit for Management Approval
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- 9. REVIEW SUBMISSION VERIFICATION GATE MODAL -->
-  <div id="modalVerifyReviewGuest" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-100">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <div>
-          <h3 class="font-extrabold text-base text-brand-navy">Guest Verification Gate</h3>
-          <p class="text-xs text-slate-500">Only verified Dolan & Harris Ijen guests can submit a review</p>
-        </div>
-        <button onclick="document.getElementById('modalVerifyReviewGuest').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <form onsubmit="reviewsService.handleVerifySubmit(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Enter Invoice Number or Registered Email *:</label>
-          <input type="text" id="verifyReviewInput" required placeholder="e.g. INV/HIJ/2026/09/001 or adunni@example.com" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-mono focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-
-        <div id="verifyReviewError" class="p-2.5 bg-rose-50 text-rose-700 border border-rose-200 rounded-xl text-xs hidden"></div>
-
-        <button type="submit" class="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow transition">
-          Verify Booking & Unlock Review Form
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- 10. REVIEW SUBMISSION FORM MODAL -->
-  <div id="modalSubmitReview" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs hidden">
-    <div class="modal-content bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-        <div>
-          <h3 class="font-extrabold text-base text-brand-navy">Submit Verified Guest Review</h3>
-          <p id="verifiedReviewGuestSubtitle" class="text-xs text-emerald-600 font-bold">Booking Verified</p>
-        </div>
-        <button onclick="document.getElementById('modalSubmitReview').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <form onsubmit="reviewsService.handleReviewFormSubmit(event)" class="space-y-4 text-xs">
-        <input type="hidden" id="reviewGuestNameHidden">
-        <input type="hidden" id="reviewInvoiceHidden">
-        <input type="hidden" id="reviewCountryHidden">
-        <input type="hidden" id="reviewTourPackageHidden">
-
-        <!-- Overall Star Rating -->
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Overall Star Rating *:</label>
-          <div class="flex items-center space-x-2 text-2xl text-slate-300 cursor-pointer" id="starRatingContainer">
-            <i class="fa-solid fa-star hover:text-amber-400 transition" onclick="reviewsService.setRating(1)"></i>
-            <i class="fa-solid fa-star hover:text-amber-400 transition" onclick="reviewsService.setRating(2)"></i>
-            <i class="fa-solid fa-star hover:text-amber-400 transition" onclick="reviewsService.setRating(3)"></i>
-            <i class="fa-solid fa-star hover:text-amber-400 transition" onclick="reviewsService.setRating(4)"></i>
-            <i class="fa-solid fa-star hover:text-amber-400 transition text-amber-400" onclick="reviewsService.setRating(5)"></i>
-            <span id="starRatingValueText" class="text-sm font-bold text-slate-700 ml-2">5.0 / 5.0</span>
-          </div>
-          <input type="hidden" id="reviewRatingInput" value="5">
-        </div>
-
-        <!-- 4 Categories Rating -->
-        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-          <div class="font-bold text-slate-800 text-[11px] uppercase tracking-wide">Category Sub-Ratings (1 to 5):</div>
-          <div class="grid grid-cols-2 gap-2 text-xs">
-            <div>
-              <label class="block text-slate-600 font-medium">Professionalism:</label>
-              <select id="revCatProf" class="w-full bg-white border border-slate-200 rounded-lg p-1.5 font-bold">
-                <option value="5">5 ★★★★★ (Exceptional)</option>
-                <option value="4">4 ★★★★ (Good)</option>
-                <option value="3">3 ★★★ (Average)</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-slate-600 font-medium">Quality of Work / Tour:</label>
-              <select id="revCatQual" class="w-full bg-white border border-slate-200 rounded-lg p-1.5 font-bold">
-                <option value="5">5 ★★★★★ (Exceptional)</option>
-                <option value="4">4 ★★★★ (Good)</option>
-                <option value="3">3 ★★★ (Average)</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-slate-600 font-medium">Timeliness & Pickup:</label>
-              <select id="revCatTime" class="w-full bg-white border border-slate-200 rounded-lg p-1.5 font-bold">
-                <option value="5">5 ★★★★★ (On-time)</option>
-                <option value="4">4 ★★★★ (Minor delay)</option>
-                <option value="3">3 ★★★ (Delayed)</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-slate-600 font-medium">Communication:</label>
-              <select id="revCatComm" class="w-full bg-white border border-slate-200 rounded-lg p-1.5 font-bold">
-                <option value="5">5 ★★★★★ (Responsive)</option>
-                <option value="4">4 ★★★★ (Good)</option>
-                <option value="3">3 ★★★ (Average)</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review Text -->
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">Your Detailed Experience & Feedback *:</label>
-          <textarea id="reviewTextInput" required rows="4" placeholder="Tell us about your guide, the trek, safety gear, pickup experience..." class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800"></textarea>
-        </div>
-
-        <div class="flex items-center justify-end space-x-2 pt-3 border-t border-slate-100">
-          <button type="button" onclick="document.getElementById('modalSubmitReview').classList.add('hidden')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl">
-            Cancel
-          </button>
-          <button type="submit" class="px-5 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow transition">
-            Publish Verified Review
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- App Services JS Modules -->
+  <!-- App JavaScript Files -->
   <script src="assets/js/db.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/discounts.js"></script>
   <script src="assets/js/files.js"></script>
-  <script src="assets/js/invoice.js"></script>
   <script src="assets/js/scanner.js"></script>
   <script src="assets/js/cancellation.js"></script>
   <script src="assets/js/reviews.js"></script>
-  <script src="assets/js/finance.js"></script>
-  <script src="assets/js/audit.js"></script>
-  <script src="assets/js/blogspot.js"></script>
   <script src="assets/js/app.js"></script>
 
+  <!-- ==================== AUTO-RESIZE SCRIPT FOR BLOGSPOT IFRAME ==================== -->
   <script>
-    function saveGoogleSheetSettings() {
-      const url = document.getElementById('googleSheetUrlInput')?.value.trim();
-      if (url) {
-        window.db.updateSettings({ googleSheetSyncUrl: url });
-        alert('Google Apps Script URL saved! Auto-sync is active.');
+    function sendHeightToParent() {
+      var bodyHeight = document.body ? document.body.scrollHeight : 0;
+      var docHeight = document.documentElement ? document.documentElement.scrollHeight : 0;
+      var actualHeight = Math.max(bodyHeight, docHeight);
+
+      if (window.parent && actualHeight > 0) {
+        window.parent.postMessage({
+          type: 'HARRIS_PORTAL_RESIZE',
+          height: actualHeight
+        }, '*');
       }
     }
 
-    function handleImportDatabase(e) {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (evt) => {
-          const res = window.db.importDatabaseJSON(evt.target.result);
-          if (res.success) {
-            alert(`Database restored successfully! ${res.count} reservations loaded.`);
-            location.reload();
-          } else {
-            alert('Failed to import database: ' + res.error);
-          }
-        };
-        reader.readAsText(file);
-      }
+    // Kirim tinggi saat dimuat & diubah ukurannya
+    window.addEventListener('load', sendHeightToParent);
+    window.addEventListener('resize', sendHeightToParent);
+
+    // Pantau perubahan konten dinamis secara real-time
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(sendHeightToParent);
+      ro.observe(document.body);
+    } else {
+      setInterval(sendHeightToParent, 1000);
     }
   </script>
 </body>
