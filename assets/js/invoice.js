@@ -177,7 +177,9 @@ class HarrisInvoiceService {
     doc.setFontSize(8);
     doc.setTextColor(100, 116, 139);
     doc.text('Hukum • Travel Agent • Jasa Visa • Banyuwangi - East Java', 44, 34);
-    doc.text('JL. KENJO GLONDOK NO 06, DUSUN GLONDOK RT 001 RW 001, Desa/Kelurahan Licin,district Licin, Kab. Banyuwangi 68454. | Phone: +62 812-4994-9035', 44, 38);
+    doc.text('Jl.Kenjo Glondok No.06D, Licin, Banyuwangi | Phone: +62 812-4994-9035', 44, 38);
+    doc.text('Jl.Danau Tamblingan No.132A, Sanur,Bali | Phone: +62 822-3219-1835', 44, 38);
+    doc.text('3847 mckinney ave,dallas,tx,USA | Phone: +1 (318) 582-8908', 44, 38);
     doc.text('Website: https://www.harrisijentourandtravel.com | Directory: HIC2502982017', 44, 42);
 
     // Invoice Title & Status
